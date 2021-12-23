@@ -1,13 +1,9 @@
-
-
-
 ---
-title:  "R Básico"
-author: Prof Me Edeilson Silva 
-site: bookdown:bookdown_site
-output: bookdown::gitbook
+title: "Edeilson Silva"
+author: ""
+output: html_document
 ---
 
-**Anotações**
+## R Básico
 
-
+Anotações de R <http://edeilson.github.io/r_basico>.
