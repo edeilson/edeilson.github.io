@@ -10,8 +10,10 @@ output: bookdown::gitbook
 
 # R Básico
 
+Aqui teremos os conceitos iniciais
 
-# Exercicios 
+
+## Exercicios 
 
 1 Qual das seguintes opções possuem variáveis categóricas ordinais:
 *cor_dos_olhos()
@@ -47,13 +49,18 @@ $sep
 
 
 #Data Wrangling
+
+O objetivo aqui é trabalhar com os principais pacotes para o manuseio de dados
+
 #Webscrapping
 
+Aqui vou colocar um tutorial sobre webscrapping
 
 
 
 #Dataviz
 
+O mesmo com pacotes tipo o GGPLOT
 
 
 
