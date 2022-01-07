@@ -1,12 +1,9 @@
 ---
-title: "Edeilson Silva"
+title: ""
 author: ""
 output: html_document
 ---
 
-## R Básico
-
-Anotações de R <http://edeilson.github.io/r_basico>.
 
 
 
