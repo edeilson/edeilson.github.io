@@ -1,0 +1,130 @@
+---
+title: "estatistica_basica"
+output: pdf_document
+---
+# Notas de estudo
+
+# Como formular hipóteses?
+
+A hipótese 
+H0 é a hipótese nula - Por exemplo, assumimos que nossos clientes coloquem o preço do produto como principal fator no momento da compra.  
+H1 é a hipótese alternativa - Acreditamos que alguma outra variável como a qualidade do serviço é tão relevante quanto o valor.
+
+# O que é o chi-quadrado, como aplicá-lo?
+
+Aplicado quando desejamos testar uma hipótese. A hipótese
+
+aplicado a pratir da frequência das observações
+
+é preciso definir o nível de significância (probabilidade de aceitar ou rejeitar a hipótese)
+
+Quanto menor o nível de significânfia maior a confiabilidade 
+
+nível de significância
+graus de liberdade
+
+
+Soma(Freq observada - Freq esperada)²/ Freq esperada
+
+Soma(H1 - H0)²/ H0
+
+library(kable)
+
+base <- data.frame(renovou = c(289, 27),
+            n_renovou = c(737, 83))
+            
+base[-1,]  <- c("A","B")          
+             
+base             
+             
+              RH+   RH-    observado (H0)
+renovou       289   27     316
+n renovou     737   83     820
+(h1)esperado  1026  110    1136
+        
+Valores de E  
+
+316*1026/1136 = 285.40
+820*1026/1136 = 740.59
+
+316*110/1136 = 30.59
+820*110/1136 = 79.40
+
+
+#Tabela de freq esperada 
+              RH+   RH-    
+renovou       285.40   30.59 
+n renovou     740.59   79.40 
+
+
+# Aplica a fórmula
+
+((289-285.40)^2)/285.40 + ((737-740.59)^2)/740.59 
++ ((27-30.59)^2)/30.59 + ((83-79.40)^2)/79.40
+
+# nível de significância
+
+# graus de liberdade
+
+
+
+https://www.youtube.com/watch?v=IsKRi1KKAdQ
+
+# OBSERVADA
+            TRABALHANDO 
+            SIM   NÃO
+RENOVOU     8     404    412    64,8%
+N_RENOVOU   12    212    224    35,2%
+            20    616    636
+            
+
+# ESPERADO
+            TRABALHANDO 
+            SIM                 NÃO
+RENOVOU     412*20/636=12.95    412*616/636=399.04
+N_RENOVOU   224*20/636=7.04     224*616/636=216.95
+              
+# DIFERENÇA - Esse resultado precisa ser 0
+            TRABALHANDO 
+            SIM               NÃO
+RENOVOU     8-12.95= -4.95    404-399.04 = 4.96 
+N_RENOVOU   12-7.04= 4.96     212-216.95 = -4.95 
+
+
+#     Para REsolver                   
+Soma(O-E)²/E
+
+
+(8-12.95)^2/12.95 + (404-399.04)^2/399.04 + (12-7.04)^2/7.04 + (212-216.95)^2/216.95
+
+chiQuadrado <-  round((8-12.95)^2/12.95, 1) +                               round((404-399.04)^2/399.04, 1) + 
+                round((12-7.04)^2/7.04, 1) + 
+                round((212-216.95)^2/216.95, 1)
+
+5,6 é a diferença entre o observado e o esperado
+
+
+Se a discrepância entre as tabela for grande (5,6) podemos inferir que há uma associação entre as renovações e quem estava trabalhando
+
+# 2º Passo determinar o nível de significância (probabilidade de decidir pela associação entre as variáveis quando, na vdd, o evento se deu ao acaso)
+
+
+# 3º Passo - Calcular o grau de liberdade (Linha - 1)x(Coluna-1)
+
+Neste caso (2-1)*(2-1) = 1GL
+
+4º Consultar a tabela de qui-quadrado <https://www.ime.unicamp.br/~cnaber/Tabela%20da%20Qui-quadrado.pdf>
+
+x2 crít. (x2 5%, 1GL) >= 3,841
+
+
+#Conclusão
+Como x2calc(5,6) > x2crít(3,84), então aceitamos a ASSOCIAçÂO entre as variáveis 'RENOVOU' e 'Trabalhando'
+
+Interpretação: a probabilidade da 'diferença entre as duas tabelas' (x2) ser maior do que 3,84 é de 5%
+
+
+Embora mencionem que trabalhar não é o principal fator o teste chi quadrado mostra que 
+
+
+
