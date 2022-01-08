@@ -1,0 +1,34 @@
+---
+title: "Ciência de dados"
+author: Prof Me Edeilson Silva 
+site: bookdown:bookdown_site
+output: bookdown::gitbook
+---
+
+**Anotações**
+
+
+Ciência de dados
+
+Embora tenha aparecido com maior força nos últimos anos as Ciências de Dados não 
+são um campo exatamente novo. Essa disciplina deriva de estudos vindos da 
+matemática e estatística aplicada, da inteligência   
+
+Big Data
+
+Caracteristicas: 3 V's
+Não pode ser processado por computadores tradicionais 
+
+Dados tabulares e NoSQL
+
+
+Qual é a diferença entre Big Data e Data Science?
+
+O Data Science é um conceito que envolve multiplas disciplinas como a matemática e estatística aplicada e programação de computadores. Essas ferramentas são utilizadas para explorar, compreender e tomar decisões baseadas em dados. O Big Data é justamente a camada de dados, ou seja, quando este último toma proporções que variedade, velocidade e volume que não podem ser processados por um computador tradicional.
+
+**<Big Data está mais relacionado à tecnologia. Ele fornece um ambiente computacional não apenas para análise como também para outros tipos de tarefas de processamento. A Ciência de Dados, por sua vez, está mais relacionada à criação de modelos capazes de extrair padrões de dados complexos e o seu uso em problemas da vida real.>**
+
+Qual é a definição de Small Data? Cite um exemplo.
+É um conjunto de dados cujos volume e formato permitem que o seu processamento e análise sejam realizados por uma pessoa ou uma pequena organização. Por exemplo, todos nós geramos pequenos dados por meio do uso dos nossos telefones celulares, e esses dados são armazenados localmente no dispositivo. No entanto, quando esses dados são enviados aos servidores para serem processados, eles se tornam Big Data.
+
+Tomada de decisão baseada em dados

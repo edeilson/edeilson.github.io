@@ -8,6 +8,128 @@ site: bookdown:bookdown_site
 output: bookdown::gitbook
 ---
 
-**Anotações**
+# R Básico
+
+Aqui teremos os conceitos iniciais
+
+
+## Exercicios 
+
+1 Qual das seguintes opções possuem variáveis categóricas ordinais:
+*cor_dos_olhos()
+*cor_do_cabelo()
+*continete(oceania, europa, america, africa, antartica)
+*avaliacao_filme(ruim, neutro, bom)
+
+
+2 What does _my_matrix[,1]_ select  from the matrix _my_matrix_? 
+*Todos os elementos da primeira linha
+*Todos os elementos da última coluna
+*Todos os elementos da primeira coluna
+
+
+3 Complete the code to return the output 
+temp <- list(jan = 39)
+? (temp, sep = 57)
+
+$jan
+[1] 39
+
+$sep
+[1] 57
+
+*append
+*combine
+*c
+*concat
+
+4.
+
+
+
+
+# Data Wrangling
+
+O objetivo aqui é trabalhar com os principais pacotes para o manuseio de dados
+
+# Web scrapping
+
+Também conhecido com **web harvesting** e **web data extraction**, a técnica basicamente consistem em fazer raspagem de dados na internet. Para o procedimento estou utilizando as bibliotecas a seguir:
+
+```{r echo = TRUE, results = 'hide', eval=FALSE, error=FALSE, warning=FALSE, message=FALSE}
+library(rvest)
+library(dplyr)
+```
+
+Para isso também iremos precisar conhecer as TAGS CSSS
+
+Para selecionar os NODES CSS estou utilizando a extensão *SelectorGadget* disponível na Chrome web store <https://chrome.google.com/webstore>
+
+
+```{r echo = FALSE, results = 'hide', eval=FALSE, error=FALSE, warning=FALSE, message=FALSE}
+library(rvest)
+library(dplyr)
+
+link = "https://www.imdb.com/search/title/?title_type=feature&num_votes=25000,&genres=comedy"
+page <- read_html(link)
+
+titulo <- page %>% html_nodes(".lister-item-header a") %>%  html_text()
+
+ano <- page %>% html_nodes(".lister-item-year") %>%  html_text()
+# REGEX para selecionar somente os valores
+ano <- as.numeric(gsub(".*?([0-9]+).*", "\\1", ano)) 
+
+nota <- page %>% html_nodes(".ratings-imdb-rating") %>%  html_text()
+# Selecionando somente o os números
+nota <- as.numeric(unlist(nota)) 
+
+sinopse <- page %>% html_nodes(".ratings-bar+ .text-muted") %>%  html_text()
+
+filmes <- data.frame('titulo' = titulo,
+                     'ano' = ano, 
+                     'nota' = nota,
+                     'sinopse' = sinopse)
+
+View(filmes)
+
+write.csv(filmes, '/home/edge/Desktop/filmes.csv')
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Dataviz
+
+O mesmo com pacotes tipo o GGPLOT
+
+
+
+```{r}
+
+
+```
+
+
 
 
